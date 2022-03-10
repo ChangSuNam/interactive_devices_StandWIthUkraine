@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <!--javascript-->
+    <script type="text/javascript" src="standWithUkraine.js"></script>
+    <title>Stand with Ukraine</title>
+    <style>
+        .flagContainer {
+            /* left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto; */
+            height:
+                600px;
+            width:
+                900px;
+            position: absolute;
+            
+
+
+        }
+        .button{
+            background-color: #005bbc;
+            color: white;
+        }
+        .button:focus{
+            background-color: #ffd600;
+            color: black;
+        }
+        .buttonRow {
+            /* display: inline-block;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%); */
+
+            margin-top: 50%;
+            padding: 50px;
+
+        }
+
+        #textDiv {
+          font-size: 20px;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+        #ukraine {
+            opacity: 1;
+        }
+
+        .containerBlueU {
+            height:
+                300px;
+            width:
+                900px;
+            margin:
+                auto;
+            background-color: #005bbc;
+        }
+
+        .containerYellowU {
+            height: 300px;
+            width:
+                900px;
+            margin:
+                auto;
+            background-color:
+                #ffd600;
+        }
+
+        .containerWhiteR {
+            height:
+                200px;
+            width:
+                900px;
+            margin:
+                auto;
+            background-color: #FFFFFF;
+        }
+
+        .containerBlueR {
+            height:
+                200px;
+            width:
+                900px;
+            margin:
+                auto;
+            background-color: #0033A0;
+        }
+
+        .containerRedR {
+            height:
+                200px;
+            width:
+                900px;
+            margin:
+                auto;
+            background-color: #DA291C;
+        }
+    </style>
+
+
+
+</head>
+
+
+<body style=" background-color : beige">
+    <div class="container row">
+        <div class="col-lg-6">
+            <div class="row buttonRow">
+                
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3"> <button class = "button" type="button" id="buttonNorth">Donation</button></div>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6"> <button class = "button" type="button" id="buttonWest"> Allies</button></div>
+                <div class="col-lg-6"> <button class = "button" type="button" id="buttonEast">Live News</button></div>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3"> <button class = "button" type="button" id="buttonSouth"> Why?</button></div>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3"></div>
+
+
+            </div>
+
+            <div class="row textRow" id = "textDiv">
+            
+            </div>
+
+        </div>
+
+        <div class="col-lg-6">
+            <div class="flagContainer">
+                <div class="row containerWhiteR">
+                </div>
+                <div class="row containerBlueR">
+                </div>
+                <div class="row containerRedR">
+                </div>
+            </div>
+
+            <div class="flagContainer" id="ukraine">
+
+                <div class="row containerBlueU">
+                </div>
+                <div class="row containerYellowU">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
