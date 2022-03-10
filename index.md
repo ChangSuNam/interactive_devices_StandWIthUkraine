@@ -58,8 +58,11 @@ The content of the html page contains information on the Russia-Ukraine crisis, 
 The flag is set to slowly fade out to a Russian flag, and the user can prevent this by pressing the buttons. However, the flag starts to fade again, and the user needs to constantly press the button. This was set to imply that if the world loses interest in Ukraine and stop caring about it, the whole country would be taken over by Russia, like how they annexed Crimea in 2014. In addition, the html page plays the national anthem of Ukraine, and the volume can be controlled with the potentiometer.
 
 The code for javascript can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/standWithUkraine.js
+
 The code for html can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/standWithUkraine.html
+
 The source of the picture displayed is: https://image5jvqbd.fmkorea.com/files/attach/new2/20220307/486616/3518195379/4406615044/99b983892094b5c6d2fc3736e15da7d1.jpg 
+
 The source of the audio file is: https://web.archive.org/web/20041019081257/http://www.navyband.navy.mil/anthems/ANTHEMS/Ukraine.mp3
 
 Finally, the ESP32 and the components were enclosed in a cardboard box, which was then covered with white papers.
@@ -70,7 +73,7 @@ I cut the board so that the components could fit.
 ![IMG_9597](https://user-images.githubusercontent.com/25335750/157602422-cba8dfb3-5dda-4969-b53c-fbfc8e404b33.jpg)
 ![IMG_9600](https://user-images.githubusercontent.com/25335750/157602482-b6a46e97-81a7-4021-9699-6fc5c84d24f7.jpg)
 
-The target audience of this project is anyone. I wish this project reminds anyone that finds out about this project freedom is not free.
+The target audience of this project is anyone. I wish this project reminds anyone who encounters this that freedom is not free. 
 
 Technical difficulties I experienced doing this project was that when JSON data was sent serially, it sometimes arrived on the javascript's side as incomplete fractions, causing error to stop the while(true) loop receiving JSON data constantly. This was fixed using try{} catch(e){} block to skip the error and continue looping. In addition, I initially connected the switch to the GPIO 37 pin on ESP32, but this did not work because pin 34 to pin 39 do not have pulllup or pulldown resistors. More information on this can be found at:https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
 
