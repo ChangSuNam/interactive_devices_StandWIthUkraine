@@ -53,9 +53,9 @@ The details of the code can be found at: https://github.com/ChangSuNam/interacti
 
 The JSON data is then received by a javascript code, which allows the user to interact with a simple html page with texts, images, buttons and audio. 
 
-The content of the html page contains information on the Russia-Ukraine crisis, 2022. It displays 4 buttons and the flag of Ukraine. When each of the button are chosen with the joystick and clicked with the switch, it displays specific informations regarding the crisis under the buttons. For instance, when "Donation" button is clicked, the page displays ways to donate to Ukraine.
+The content of the html page contains information on the Russia-Ukraine crisis, 2022. It displays 4 buttons and the flag of Ukraine. When each of the button is chosen with the joystick and clicked with the switch, it displays specific informations regarding the crisis under the buttons. For instance, when "Donation" button is clicked, the page displays ways to donate to Ukraine.
 
-The flag is set to slowly fade out to a Russian flag, and the user can prevent this by constantly pressing the buttons. This was set to imply that if the world loses interest in Ukraine and stop caring about it, the whole country would be assimilated by Russia, like how they annexed Crimea in 2014. In addition, the html page plays the national anthem of Ukraine, and the volume can be controlled with the potentiometer.
+The flag is set to slowly fade out to a Russian flag, and the user can prevent this by pressing the buttons. However, the flag starts to fade again, and the user needs to constantly press the button. This was set to imply that if the world loses interest in Ukraine and stop caring about it, the whole country would be taken over by Russia, like how they annexed Crimea in 2014. In addition, the html page plays the national anthem of Ukraine, and the volume can be controlled with the potentiometer.
 
 The code for javascript can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/standWithUkraine.js
 The code for html can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/standWithUkraine.html
