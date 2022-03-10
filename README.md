@@ -78,6 +78,8 @@ The target audience of this project is anyone. I wish this project reminds anyon
 Technical difficulties I experienced doing this project was that when JSON data was sent serially, it sometimes arrived on the javascript's side as incomplete fractions, causing error to stop the while(true) loop receiving JSON data constantly. This was fixed using try{} catch(e){} block to skip the error and continue looping. In addition, I initially connected the switch to the GPIO 37 pin on ESP32, but this did not work because pin 34 to pin 39 do not have pulllup or pulldown resistors. More information on this can be found at:https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
 
 The video recording of this project can be found at: https://youtu.be/v0MUYf-T6SM
+The github pages for this project: https://changsunam.github.io/interactive_devices_StandWIthUkraine/
+
 
 
 
