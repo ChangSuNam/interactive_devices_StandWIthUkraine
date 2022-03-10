@@ -2,7 +2,7 @@
 /**
  * This program allows ESP32 to interact with a switch, potentiometer, and joystick.
  * 
- * Uses ArduinoJson Libary to send output of switch, potentiometer and joystick to the
+ * Uses ArduinoJson Libary to send output of switch, potentiometer and joystick as JSON, serially.
  * 
  * @Author ChangSu Nam
  * @UNI cn2521
@@ -36,7 +36,7 @@ StaticJsonDocument<capacity> doc;
  * Variables.
  * 
  * switchState the state of switch, either on or off.
- * 
+ * joystickSwitchState the state of switch on a joystick.
  */
 int switchState = 0;         // variable for reading the status of switch. 
 int joystickSwitchState = 0;         // variable for reading the status of joystick's switch. 
@@ -51,13 +51,13 @@ void setup() {
 
 
 void loop() {
-   /** 
-    *  Potentiometer
-    */
+  
    delay(100); 
     
+    /** 
+    *  Potentiometer
+    */
    int potentVal =  map(analogRead(potentiometerPin), 0, 4095, 0, 100); 
-   //potentOutput = map(pooh tentVal, 0,)
    //Serial.print(potentVal);
    //Serial.print("  "); 
    
@@ -76,7 +76,6 @@ void loop() {
  
   
   // read the state of the pushbutton value:
-
   int joystickSWVal = -1;
   joystickSwitchState = digitalRead(joystickSWPin);
   if (joystickSwitchState == HIGH) { //button not pressed
@@ -129,6 +128,4 @@ void loop() {
   serializeJson(doc, output);
   Serial.print("\n");
   Serial.print(output+"\n");
-  
-  
   }
