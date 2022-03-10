@@ -48,10 +48,12 @@ Joystick: 1. GND pin of the joystick was connected to bottom right ground pin of
   	     5. SW pin of the joystick was connected to pin 25 of TTGO ESP32.
 
 The ESP32 was then connected to a laptop so that a program can be loaded on it via Arduino IDE. The code reads the input that user creates with the switch, potentiometer, and joystick with either anlaogueRead() or digitalRead(). With theses values, it creates a JSON data, which is then serially printed. "ArduinoJson" was used to convert the data to JSON: https://arduinojson.org 
+
 The details of the code can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/Module2_interactive_devices.ino
+
 The JSON data is then received by a javascript code, which allows the user to interact with a simple html page with texts, images, buttons and audio. 
 
-The content of the html page contains of information on the Russia-Ukraine crisis, 2022. It displays 4 buttons and the flag of Ukraine. When each of the button are chosen with the joystick and clicked with the switch, it displays specific informations regarding the crisis under the buttons. For instance, when "Donation" button is clicked, the page displays ways to donate to Ukraine.
+The content of the html page contains information on the Russia-Ukraine crisis, 2022. It displays 4 buttons and the flag of Ukraine. When each of the button are chosen with the joystick and clicked with the switch, it displays specific informations regarding the crisis under the buttons. For instance, when "Donation" button is clicked, the page displays ways to donate to Ukraine.
 
 The flag is set to slowly fade out to a Russian flag, and the user can prevent this by constantly pressing the buttons. This was set to imply that if the world loses interest in Ukraine and stop caring about it, the whole country would be assimilated by Russia, like how they annexed Crimea in 2014. In addition, the html page plays the national anthem of Ukraine, and the volume can be controlled with the potentiometer.
 
