@@ -37,15 +37,15 @@ The specific connections on ESP32 for the components are stated below:
 
 Switch: One end was connected to ground, the other one to pin 26, the GPIO, to read digital values like 0 or 1.
 
-Potentiometer: -The rightmost pin of potentiometer was connected to 3.3v, bottom left pin of TTGO ESP32.
-		           -The middle pin of the potentiometer was connected to pin 12 of TTGO ESP32.
-		           -The leftmost pin of the potentiometer was connected to second ground pin from top left.
+Potentiometer: 1. The rightmost pin of potentiometer was connected to 3.3v, bottom left pin of TTGO ESP32.
+2. The middle pin of the potentiometer was connected to pin 12 of TTGO ESP32.
+3. The leftmost pin of the potentiometer was connected to second ground pin from top left.
 
-Joystick: -GND pin of the joystick was connected to bottom right ground pin of TTGO ESP32
-	        -5V pin of the joystick was connected to top right 3V pin of TTGO ESP32
-	        -VRy pin of the joystick was connected to pin 27 of TTGO ESP32.
-          -VRx pin of the joystick was connected to pin 13 of TTGO ESP32.
-  	      -SW pin of the joystick was connected to pin 25 of TTGO ESP32.
+Joystick: 1. GND pin of the joystick was connected to bottom right ground pin of TTGO ESP32
+	        2. 5V pin of the joystick was connected to top right 3V pin of TTGO ESP32
+	        3. VRy pin of the joystick was connected to pin 27 of TTGO ESP32.
+          4. VRx pin of the joystick was connected to pin 13 of TTGO ESP32.
+  	     5. SW pin of the joystick was connected to pin 25 of TTGO ESP32.
 
 The ESP32 was then connected to a laptop so that a program can be loaded on it via Arduino IDE. The code reads the input that user creates with the switch, potentiometer, and joystick with either anlaogueRead() or digitalRead(). With theses values, it creates a JSON data, which is then serially printed. "ArduinoJson" was used to convert the data to JSON: https://arduinojson.org 
 The details of the code can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/Module2_interactive_devices.ino
