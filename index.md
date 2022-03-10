@@ -2,7 +2,7 @@
 
 
 
-# Description of the project
+# Project Description
   
   
   For this project, an interactive device was built with the following hardwares:
@@ -34,6 +34,7 @@ Potentiometer and switch:
 ![IMG_9490](https://user-images.githubusercontent.com/25335750/157594529-29b1d360-3c73-4676-965b-4c7582e3aa15.jpg)
 
 The specific connections on ESP32 for the components are stated below:
+
 Switch: One end was connected to ground, the other one to pin 26, the GPIO, to read digital values like 0 or 1.
 
 Potentiometer: -The rightmost pin of potentiometer was connected to 3.3v, bottom left pin of TTGO ESP32.
@@ -45,43 +46,36 @@ Joystick: -GND pin of the joystick was connected to bottom right ground pin of T
 	        -VRy pin of the joystick was connected to pin 27 of TTGO ESP32.
           -VRx pin of the joystick was connected to pin 13 of TTGO ESP32.
   	      -SW pin of the joystick was connected to pin 25 of TTGO ESP32.
-![image](https://user-images.githubusercontent.com/25335750/157594632-e48d89b5-3661-4dbe-bd7a-bcbab17f55cd.png)
 
 The ESP32 was then connected to a laptop so that a program can be loaded on it via Arduino IDE. The code reads the input that user creates with the switch, potentiometer, and joystick with either anlaogueRead() or digitalRead(). With theses values, it creates a JSON data, which is then serially printed. "ArduinoJson" was used to convert the data to JSON: https://arduinojson.org 
 The details of the code can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/Module2_interactive_devices.ino
-
 The JSON data is then received by a javascript code, which allows the user to interact with a simple html page with texts, images, buttons and audio. 
 
-The source of the picture is: 
-The source of the audio file is: 
+The content of the html page contains of information on the Russia-Ukraine crisis, 2022. It displays 4 buttons and the flag of Ukraine. When each of the button are chosen with the joystick and clicked with the switch, it displays specific informations regarding the crisis under the buttons. For instance, when "Donation" button is clicked, the page displays ways to donate to Ukraine.
+
+The flag is set to slowly fade out to a Russian flag, and the user can prevent this by constantly pressing the buttons. This was set to imply that if the world loses interest in Ukraine and stop caring about it, the whole country would be assimilated by Russia, like how they annexed Crimea in 2014. In addition, the html page plays the national anthem of Ukraine, and the volume can be controlled with the potentiometer.
+
+The code for javascript can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/standWithUkraine.js
+The code for html can be found at: https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/blob/main/standWithUkraine.html
+The source of the picture displayed is: https://image5jvqbd.fmkorea.com/files/attach/new2/20220307/486616/3518195379/4406615044/99b983892094b5c6d2fc3736e15da7d1.jpg 
+The source of the audio file is: https://web.archive.org/web/20041019081257/http://www.navyband.navy.mil/anthems/ANTHEMS/Ukraine.mp3
+
+Finally, the ESP32 and the components were enclosed in a cardboard box, which was then covered with white papers.
+![IMG_9586](https://user-images.githubusercontent.com/25335750/157601871-d4acbd95-443e-448b-916c-0fa5f7b9769d.jpg)
+![IMG_9593](https://user-images.githubusercontent.com/25335750/157601900-f870193f-c181-44e6-bfd4-bb0ec865551d.jpg)
+I cut the board so that the components could fit.
+![IMG_9595](https://user-images.githubusercontent.com/25335750/157602383-f20b157d-5fe5-4d0d-bce3-7fcbe829338c.jpg)
+![IMG_9597](https://user-images.githubusercontent.com/25335750/157602422-cba8dfb3-5dda-4969-b53c-fbfc8e404b33.jpg)
+![IMG_9600](https://user-images.githubusercontent.com/25335750/157602482-b6a46e97-81a7-4021-9699-6fc5c84d24f7.jpg)
+
+The target audience of this project is anyone. I wish this project reminds anyone that finds out about this project freedom is not free.
+
+Technical difficulties I experienced doing this project was that when JSON data was sent serially, it sometimes arrived on the javascript's side as incomplete fractions, causing error to stop the while(true) loop receiving JSON data constantly. This was fixed using try{} catch(e){} block to skip the error and continue looping. In addition, I initially connected the switch to the GPIO 37 pin on ESP32, but this did not work because pin 34 to pin 39 do not have pulllup or pulldown resistors. More information on this can be found at:https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf
+
+The video recording of this project can be found at: https://youtu.be/v0MUYf-T6SM
 
 
 
 
 
 
-
-
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ChangSuNam/interactive_devices_StandWIthUkraine/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
